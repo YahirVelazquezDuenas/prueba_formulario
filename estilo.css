@@ -1,0 +1,120 @@
+body {
+    background-image: url(paisaje.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color:fuchsia;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 50px;
+}
+
+h2 {
+    color:blue;
+    text-align: center;
+    font-size: 30px;
+    font-style: oblique;
+}
+
+h3 {
+    color:purple;
+    font-size: 35 px;
+    font-style: italic;
+}
+
+h4 {
+    color:black;
+    text-align: center;
+    font-size: 35px;
+}
+
+.nav a {
+    text-decoration: none;
+    color:black;
+    font-size: 30px;
+}
+
+.nav {
+    text-align: center;
+}
+
+p {
+    color: black;
+    text-align: justify;
+    font-size: 18px;
+}
+
+p a {
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 18px;
+}
+
+ul {
+    color: black;
+    text-align: justify;
+    font-size: 18px;
+}
+
+ol {
+    color: black;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.footer a {
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 18px;
+}
+
+.footer {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 6px;
+    text-align: cente;
+    background-color:blanchedalmond;
+    font-size: 18px;
+}
+
+td {
+    text-align: justify;
+}
+
+form {
+    font-size: 18px;
+}
+
+#nombre {
+    background-color:chartreuse;
+}
+
+#correo {
+    background-color:bisque;
+}
+
+#especifique {
+    background-color:pink;
+}
+
+#contraseña {
+    background-color:antiquewhite;
+}
+
+#comentarios {
+    background-color: aquamarine;
+}
+
+.derechos {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-style: italic;
+    font-size: 18px;
+}

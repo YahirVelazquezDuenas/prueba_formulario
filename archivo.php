@@ -60,7 +60,8 @@
         } else {
             echo "<h4>"."Si me ".$_POST["interesa"]."</h4>";
         }
-    }    
+    }
+    include('conexion.php');    
     ?>
 </body>
 </html>

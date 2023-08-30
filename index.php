@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php include('conexion.php');?>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +12,7 @@
 <body>
     <h1>Contacto</h1>
     <hr>
-    <form action="archivo.php" method="POST">
+    <form action="store.php" method="POST">
         <h3>Nombre</h3>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre">
@@ -66,6 +68,27 @@
     <div class="derechos">
         <p><strong>&copy; 2023 Yahir Velázquez Dueñas. Todos los derechos reservados.</strong></p>
     </div>
+    <?php
+    $sql = "SELECT * FROM aspirante";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    echo "Hola";
+
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    echo "<ul>";
+    foreach ($stmt->fetchAll() as $row) {
+        echo "<li>"." - "."El nombre es: ".$row['Nombre']."</li>"."<br>";
+        echo "<li>"." - "."El correo es: ".$row['Correo']."</li>"."<br>";
+        echo "<li>"." - "."El genero es: ".$row['Genero']."</li>"."<br>";
+        echo "<li>"." - "."La contraseña es: ".$row['Contrasena']."</li>"."<br>";
+        echo "<li>"." - "."Los comentarios son: ".$row['Comentario']."</li>"."<br>";
+        echo "<li>"." - "."La ciudad es: ".$row['Ciudad']."</li>"."<br>";
+        echo "<li>"." - "."¿Me interesa o no?: ".$row['Intereses']."</li>"."<br>";
+        echo "<hr>"."<h2>"."Siguiente Formulario"."</h2>"."<br>"."<br>";
+    }
+    echo "</ul>";
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
